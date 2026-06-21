@@ -46,7 +46,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/fullstack-frontend:latest
 
-build-and-push-backend-ecr:
+  build-and-push-backend-ecr:
     runs-on: ubuntu-latest
 
     steps:
@@ -69,7 +69,7 @@ build-and-push-backend-ecr:
           context: ./backend
           push: true
           tags: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/fullstack-backend:latest
-
+          
   build-and-push-frontend-ecr:
     runs-on: ubuntu-latest
 
